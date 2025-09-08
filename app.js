@@ -3,9 +3,9 @@
 // For Loop
 for (let a = 1; a <= 100; a++)
     if (a % 2 !== 0) {
-        continue;
-    } else {
         console.log(a);
+    } else {
+        continue;
     }
 
 // ----------------------------------------------------------------
@@ -130,24 +130,25 @@ Create a for loop that iterates from 0 to n
 If your current iteration is equal to value, then print "Found value!", and break out of the loop
 If you do not ever find the value and break out of the loop, then after the loop is finished, print "Did not find value"
 */
-
+let found = false;
 for (let i = 0; i <= n; i++) {
     if (i === value) {
         console.log("Found value!");
+        found = true;
         break;
     }
-    if (i === n) {
-        console.log("Did not find value");
-    }
+}
+if (!found) {
+    console.log("Did not find value");
 }
 
 console.log(`The value to find is ${value}`);
 
-let i = 0;
 
 
 
 // Exercise 5 Section 
+
 
 /* 
 Re-implement exercise 2, but use start as the initial value for i, 
