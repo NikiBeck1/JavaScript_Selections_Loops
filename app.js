@@ -8,114 +8,102 @@ for (let a = 1; a <= 100; a++)
         continue;
     }
 
-// ----------------------------------------------------------------
+
 
 // Exercise 2 Section - FIZZBUZZ
 let fizzCount = 0;
 let buzzCount = 0;
 let fizzBuzzCount = 0;
 
-for (let a = 1; a <= 100; a++)
+for (let a = 1; a <= 100; a++) {
     if (a % 3 === 0 && a % 5 === 0) {
         console.log("FIZZBUZZ");
         fizzBuzzCount++;
-    } else if (a % 5 === 0) {
-        console.log("BUZZ");
-        buzzCount++;
     } else if (a % 3 === 0) {
         console.log("FIZZ");
         fizzCount++;
-    }
-
-console.log(`FIZZ was printed ${fizzCount} times`);
-console.log(`BUZZ was printed ${buzzCount} times`);
-console.log(`FIZZBUZZ was printed ${fizzBuzzCount} times`);
-
-let b = 1;
-
-while (b <= 100) {
-    if (b % 3 === 0 && b % 5 === 0) {
-        console.log("FIZZBUZZ");
-        fizzBuzzCount++;
-    } else if (b % 5 === 0) {
+    } else if (a % 5 === 0) {
         console.log("BUZZ");
         buzzCount++;
-    } else if (b % 3 === 0) {
-        console.log("FIZZ");
-        fizzCount++;
     }
-    b++;
 }
-
+console.log("Exercise 2 Results:");
 console.log(`FIZZ was printed ${fizzCount} times`);
 console.log(`BUZZ was printed ${buzzCount} times`);
 console.log(`FIZZBUZZ was printed ${fizzBuzzCount} times`);
 
-// ----------------------------------------------------------------
+
 
 // Exercise 3 Section
 
 // Part 1 - Redoing exercise 1 with while and do-while loop
 
 // While Loop
-let c = 1;
-while (c <= 100) {
-        if (c % 2 !== 0) {
-            console.log(c);
+let b = 1;
+while (b <= 100) {
+        if (b % 2 !== 0) {
+            console.log(b);
         }
-        c++;
+        b++;
     }
 
 // Do-While Loop
-let d = 1;
+let c = 1;
 do {
-    if (d % 2 !== 0) {
-        console.log(d);
+    if (c % 2 !== 0) {
+        console.log(c);
     }
-    d++;
-} while (d <= 100);
+    c++;
+} while (c <= 100);
 
 // Part 2 - Redoing exercise 2 with while and do-while loop
 
 // While Loop
-let e = 1;
-while (e <= 100) {
-    if (e % 3 === 0 && e % 5 === 0) {
+let secondFizzCount = 0;
+let secondBuzzCount = 0;
+let secondFizzBuzzCount = 0;
+let d = 1;
+while (d <= 100) {
+    if (d % 3 === 0 && d % 5 === 0) {
         console.log("FIZZBUZZ");
-        fizzBuzzCount++;
-    } else if (e % 5 === 0) {
+        secondFizzBuzzCount++;
+    } else if (d % 5 === 0) {
         console.log("BUZZ");
-        buzzCount++;
-    } else if (e % 3 === 0) {
+        secondBuzzCount++;
+    } else if (d % 3 === 0) {
         console.log("FIZZ");
-        fizzCount++;
+        secondFizzCount++;
     }
-    e++;
+    d++;
 }   
-
-console.log(`FIZZ was printed ${fizzCount} times`);
-console.log(`BUZZ was printed ${buzzCount} times`);
-console.log(`FIZZBUZZ was printed ${fizzBuzzCount} times`);
+console.log("Exercise 3 - While Loop Results:");
+console.log(`FIZZ was printed ${secondFizzCount} times`);
+console.log(`BUZZ was printed ${secondBuzzCount} times`);
+console.log(`FIZZBUZZ was printed ${secondFizzBuzzCount} times`);
 
 // Do-While Loop
-let f = 1;
+let thirdFizzCount = 0;
+let thirdBuzzCount = 0;
+let thirdFizzBuzzCount = 0;
+let e = 1;
 do {
-    if (f % 3 === 0 && f % 5 === 0) {
+    if (e % 3 === 0 && e % 5 === 0) {
         console.log("FIZZBUZZ");
-        fizzBuzzCount++;
-    }   else if (f % 5 === 0) {
+        thirdFizzBuzzCount++;
+    }   else if (e % 5 === 0) {
         console.log("BUZZ");
-        buzzCount++;
-    }   else if (f % 3 === 0) {
+        thirdBuzzCount++;
+    }   else if (e % 3 === 0) {
         console.log("FIZZ");
-        fizzCount++;
+        thirdFizzCount++;
     }
-    f++;
-} while (f <= 100);
+    e++;
+} while (e <= 100);
 
-console.log(`FIZZ was printed ${fizzCount} times`);
-console.log(`BUZZ was printed ${buzzCount} times`);
-console.log(`FIZZBUZZ was printed ${fizzBuzzCount} times`);
+console.log("Exercise 3 - Do / While Results:");
+console.log(`FIZZ was printed ${thirdFizzCount} times`);
+console.log(`BUZZ was printed ${thirdBuzzCount} times`);
+console.log(`FIZZBUZZ was printed ${thirdFizzBuzzCount} times`);
 
 // ----------------------------------------------------------------
 
@@ -162,20 +150,24 @@ let start = Math.round(Math.random() * (10 - 1) + 1); // creates a random number
 let end = Math.round(Math.random() * (1000 - 100) + 100); // creates a random number between 100 and 1000
 
 
-let fizzCount2 = 0;
-let buzzCount2 = 0;
-let fizzBuzzCount2 = 0;
+let fourthFizzCount = 0;
+let fourthBuzzCount = 0;
+let fourthFizzBuzzCount = 0;
 
-for (let i = start; i <= end; i++)
-    if (i % fizzDivisor === 0 && i % buzzDivisor === 0) {
+for (let f = start; f <= end; f++)
+    if (f % fizzDivisor === 0 && f % buzzDivisor === 0) {
         console.log("FIZZBUZZ");
-        fizzBuzzCount2++;
-    } else if (i % buzzDivisor === 0) {
+        fourthFizzBuzzCount++;
+    } else if (f % buzzDivisor === 0) {
         console.log("BUZZ");
-        buzzCount2++;
-    } else if (i % fizzDivisor === 0) {
+        fourthBuzzCount++;
+    } else if (f % fizzDivisor === 0) {
         console.log("FIZZ");
-        fizzCount2++;
+        fourthFizzCount++;
     }
 
 
+console.log("Exercise 5 Results:");
+console.log(`FIZZ was printed ${fourthFizzCount} times`);
+console.log(`BUZZ was printed ${fourthBuzzCount} times`);
+console.log(`FIZZBUZZ was printed ${fourthFizzBuzzCount} times`);
